@@ -5,7 +5,6 @@ let tasks = []
 document.getElementById('addTaskBtn').addEventListener('click', function (){
     //Get the value of the input box and store it in the variable called taskInput
     let taskInput = document.getElementById('taskInput').value
-    //ariaValueMax
 
     //Check if taskInput has something in it
     if(taskInput){
@@ -19,6 +18,26 @@ document.getElementById('addTaskBtn').addEventListener('click', function (){
         displayTasks()
     }
 })
+
+taskInput.addEventListener("keydown", (event) => {
+        //Get the value of the input box and store it in the variable called taskInput
+        let taskInput = document.getElementById('taskInput').value
+
+        if (event.key === "Enter"){
+            //Check if taskInput has something in it
+            if(taskInput){
+                //add new string to task array
+                tasks.push(taskInput)
+
+                //clear input field after adding the task
+                document.getElementById('taskInput').value = ''
+
+                //call function to update task display
+                displayTasks()
+            }
+        }
+  });
+  
 
 //function to display tasks in the list
 function displayTasks() {
@@ -63,3 +82,7 @@ document.getElementById('clearTaskBtn').addEventListener('click', function (){
     //call function to display tasks
     displayTasks()
 })
+
+function taskCounter(count){
+    
+}
