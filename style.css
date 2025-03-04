@@ -1,5 +1,8 @@
 body {
-    background: #f3deb7;
+    background: url(parchmentbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #221e17!important;
     font-family: "adobe-aldine", sans-serif;
 }
@@ -37,10 +40,12 @@ body {
 #clearTaskBtn:hover {
     background-color: #b82323;
     border: #b82323 1px solid;
-    color: #e9e9e9
+    color: #e9e9e9;
+    font-size: 20px;
 }
 
 #addTaskBtn:hover {
     background-color: #23cc48;
-    border: #23cc48 1px solid
+    border: #23cc48 1px solid;
+    font-size: 20px;
 }
